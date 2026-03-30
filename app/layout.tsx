@@ -11,6 +11,8 @@ const inter = Inter({
   variable: "--font-inter"
 })
 
+const socialPreviewUrl = "https://metodo-exacto-coach.vercel.app/social-preview-og-v3.png?v=20260330"
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://metodo-exacto-coach.vercel.app"),
   title: "Método Exacto | Asesoría Online Premium",
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/social-preview-og-v2.png",
+        url: socialPreviewUrl,
         width: 1200,
         height: 630,
         alt: "Método Exacto",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Método Exacto | Asesoría Online Premium",
     description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
-    images: ["/social-preview-og-v2.png"],
+    images: [socialPreviewUrl],
   },
   icons: {
     icon: "/icon.svg",
