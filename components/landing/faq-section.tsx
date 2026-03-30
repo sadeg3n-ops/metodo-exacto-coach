@@ -72,7 +72,7 @@ export function FaqSection() {
           </Accordion>
         </div>
       </div>
-      <div className="container mx-auto px-4 mt-20 flex flex-col items-center">
+      <div className="container mx-auto px-4 mt-16 md:mt-20 flex flex-col items-center">
         <div className="max-w-xl w-full text-center bg-card border border-border rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-br from-[#25D366]/10 to-transparent pointer-events-none" />
 
@@ -113,21 +113,21 @@ export function FaqSection() {
           </Reveal>
         </div>
 
-        <div className="mt-14 mb-2 flex flex-col items-center">
+        <div className="mt-8 md:mt-12 mb-0 flex flex-col items-center">
           <div className="relative flex flex-col items-center">
-            <div className="h-16 w-px bg-gradient-to-b from-primary/20 via-primary/80 to-transparent animate-bridge-flow" />
-            <div className="absolute top-5 h-3 w-3 rounded-full bg-primary animate-bridge-pulse" />
-            <div className="mt-3 flex items-center justify-center text-primary/80">
+            <div className="h-10 md:h-14 w-px bg-gradient-to-b from-primary/10 via-primary/45 to-transparent animate-bridge-flow" />
+            <div className="absolute top-3 h-2 w-2 rounded-full bg-primary/75 animate-bridge-pulse" />
+            <div className="mt-2 flex items-center justify-center text-primary/60">
               <svg
                 viewBox="0 0 24 24"
-                width="30"
-                height="30"
+                width="22"
+                height="22"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="1.5"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="drop-shadow-[0_0_18px_rgba(234,109,31,0.35)]"
+                className="drop-shadow-[0_0_10px_rgba(234,109,31,0.18)]"
               >
                 <path d="M12 4v14M18 12l-6 6-6-6" />
               </svg>

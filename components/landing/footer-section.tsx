@@ -16,7 +16,7 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
 
   return (
     <footer className="bg-card border-t border-border">
-      <section className="relative min-h-[68svh] md:min-h-[74vh] flex items-center py-20 md:py-28 overflow-hidden">
+      <section className="relative min-h-[54svh] md:min-h-[74vh] flex items-start md:items-center pt-10 pb-14 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
         <div className="absolute left-1/2 top-1/3 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl md:h-[34rem] md:w-[34rem]" />
@@ -25,16 +25,16 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6 md:mb-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-5 md:mb-8">
               Valoración inicial · 15 min
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 md:mb-8 text-balance leading-[1.02]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-5 md:mb-8 text-balance leading-[1.02]">
               Reserva la valoración y{" "}
               <span className="text-primary">aclara tu siguiente paso.</span>
             </h2>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto text-pretty">
               Vemos tu punto de partida, qué te frena ahora y si tiene sentido trabajar juntos.
             </p>
 
