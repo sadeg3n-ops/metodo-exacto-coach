@@ -21,11 +21,20 @@ export const metadata: Metadata = {
     description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
     siteName: "Método Exacto",
     type: "website",
+    images: [
+      {
+        url: "/social-preview-og-v2.png",
+        width: 1200,
+        height: 630,
+        alt: "Método Exacto",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Método Exacto | Asesoría Online Premium",
     description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
+    images: ["/social-preview-og-v2.png"],
   },
   icons: {
     icon: "/icon.svg",
