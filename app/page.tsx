@@ -12,10 +12,39 @@ import { FaqSection } from "@/components/landing/faq-section"
 import { FooterSection } from "@/components/landing/footer-section"
 import { CtaModal } from "@/components/landing/cta-modal"
 
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void
+    }
+  }
+}
+
 export default function MetodoExactoLandingPage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ?? ""
 
-  const openModal = () => setIsModalOpen(true)
+  const openModal = () => {
+    if (!calendlyUrl) {
+      setIsModalOpen(true)
+      return
+    }
+
+    const bookingUrl = new URL(calendlyUrl)
+    bookingUrl.searchParams.set("hide_event_type_details", "1")
+    bookingUrl.searchParams.set("hide_gdpr_banner", "1")
+    bookingUrl.searchParams.set("primary_color", "ea6d1f")
+    bookingUrl.searchParams.set("text_color", "ffffff")
+    bookingUrl.searchParams.set("background_color", "0b0d12")
+
+    if (window.Calendly?.initPopupWidget) {
+      window.Calendly.initPopupWidget({ url: bookingUrl.toString() })
+      return
+    }
+
+    window.location.href = bookingUrl.toString()
+  }
+
   const closeModal = () => setIsModalOpen(false)
 
   return (

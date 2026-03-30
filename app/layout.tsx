@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import { Analytics } from "@vercel/analytics/next"
 import { LiveToasts } from "@/components/ui/live-toasts"
 import { CustomCursor } from "@/components/ui/custom-cursor"
@@ -31,8 +32,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL?.trim()
+
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        {calendlyUrl ? (
+          <link
+            rel="stylesheet"
+            href="https://assets.calendly.com/assets/external/widget.css"
+          />
+        ) : null}
+      </head>
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <CustomCursor />
         <div className="pointer-events-none fixed inset-0 z-[100] h-full w-full opacity-[0.03] mix-blend-overlay">
@@ -47,6 +58,12 @@ export default function RootLayout({
         {children}
         <LiveToasts />
         <Analytics />
+        {calendlyUrl ? (
+          <Script
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="afterInteractive"
+          />
+        ) : null}
       </body>
     </html>
   )
