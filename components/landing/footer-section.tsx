@@ -16,25 +16,38 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
 
   return (
     <footer className="bg-card border-t border-border">
-      <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+      <section className="relative min-h-[68svh] md:min-h-[74vh] flex items-center py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute left-1/2 top-1/3 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl md:h-[34rem] md:w-[34rem]" />
+        <div className="absolute -left-24 bottom-10 h-56 w-56 rounded-full bg-primary/10 blur-3xl md:h-80 md:w-80" />
+        <div className="absolute -right-24 top-16 h-56 w-56 rounded-full bg-primary/10 blur-3xl md:h-80 md:w-80" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium text-primary mb-6 md:mb-8">
+              Valoración inicial · 15 min
+            </div>
+
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 md:mb-8 text-balance leading-[1.02]">
               Reserva la valoración y{" "}
               <span className="text-primary">aclara tu siguiente paso.</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">
               Vemos tu punto de partida, qué te frena ahora y si tiene sentido trabajar juntos.
             </p>
+
             <Button
               onClick={onCtaClick}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-10 py-7 rounded-xl group transition-all hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg md:text-xl px-10 md:px-12 py-7 md:py-8 rounded-2xl group transition-all hover:scale-105 shadow-[0_18px_60px_rgba(234,109,31,0.25)]"
             >
               Reservar valoración inicial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <p className="text-sm text-muted-foreground mt-4">
+
+            <p className="text-sm md:text-base text-muted-foreground mt-5">
               15 min. Online. Gratis. Si no encaja, te lo digo.
             </p>
           </div>
