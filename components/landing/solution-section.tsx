@@ -9,20 +9,20 @@ const features = [
   {
     icon: Lock,
     title: "Entrenamiento con criterio",
-    subtitle: "El estímulo exacto.",
-    description: "Rutina diseñada según tu nivel, tu material, tu historial y el tiempo real que tienes."
+    subtitle: "El estímulo exacto",
+    description: "Rutina diseñada y adaptada a tu nivel, tu material, tu experiencia y el tiempo del que dispones."
   },
   {
     icon: Target,
-    title: "Nutrición que se sostiene",
-    subtitle: "Comer bien sin aislarte.",
-    description: "Objetivos claros, pautas flexibles y margen para comer fuera sin perder el rumbo."
+    title: "Nutrición sostenible",
+    subtitle: "Comer bien, sin aislarte",
+    description: "Objetivos claros, pautas flexibles y margen para comer fuera sin cortar el progreso."
   },
   {
     icon: Apple,
-    title: "Seguimiento que corrige",
-    subtitle: "Ajustes con datos.",
-    description: "Revisamos técnica, adherencia y sensaciones para corregir antes de que te estanques."
+    title: "Seguimiento constante",
+    subtitle: "Ajustes con datos",
+    description: "Revisamos tu técnica y sensaciones para corregirlas en el momento correcto y evitar lesiones."
   }
 ]
 
@@ -41,7 +41,7 @@ export function SolutionSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Qué cambia cuando trabajamos con método
+              Qué cambia cuando trabajamos con un sistema claro
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
