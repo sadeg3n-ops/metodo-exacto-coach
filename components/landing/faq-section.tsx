@@ -11,27 +11,27 @@ import { Reveal } from "@/components/ui/reveal"
 const faqs = [
   {
     question: "¿Y si tengo poco tiempo?",
-    answer: "Trabajamos con tu semana real. Con 3 sesiones bien planteadas ya se puede progresar."
+    answer: "Adaptamos el plan a tus necesidades para que sea cómodo para ti y puedas ver progresos."
   },
   {
     question: "¿Sirve si empiezo desde cero?",
-    answer: "Sí. Empezar con supervisión suele ahorrar más tiempo que ir a base de prueba y error."
+    answer: "Sí. Empezar con supervisión ahorra mucho más tiempo que ir a base de prueba y error."
   },
   {
     question: "¿Y si ya lo he intentado antes?",
-    answer: "Suele fallar el sistema, no las ganas. Aquí revisamos y ajustamos antes de repetir el mismo error."
+    answer: "Lo que suele fallar es el sistema. Para asegurarnos de que progreses, revisamos los resultados y ajustamos el plan para mantener un progreso constante."
   },
   {
     question: "¿Necesito gimnasio?",
-    answer: "No. Podemos trabajar en casa con el material que tengas, aunque te diré qué mínimo te conviene para progresar mejor."
+    answer: "No. Puedes trabajar en casa con el material que tengas, aunque te diremos el mínimo del que te conviene disponer para progresar mejor."
   },
   {
     question: "¿Me vais a vender algo en la valoración?",
-    answer: "No. La valoración sirve para ver si hay encaje. Si no lo veo claro, te lo diré."
+    answer: "El objetivo de la llamada de valoración es conocerte, ver si podemos ayudarte y proponerte dar un paso adelante con nosotros solo si lo vemos claro y encaja por parte de ambos."
   },
   {
     question: "¿Cuándo se suelen notar cambios?",
-    answer: "Normalmente primero mejora el rendimiento y la sensación de control. Los cambios físicos suelen verse entre la semana 4 y la 6."
+    answer: "Medimos los resultados de forma sólida mes a mes, pudiendo ver pequeñas mejoras cada 1 o 2 semanas, dependiendo del caso y de la experiencia previa."
   }
 ]
 
