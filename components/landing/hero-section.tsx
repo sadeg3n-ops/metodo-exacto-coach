@@ -15,10 +15,11 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
     <section className="relative min-h-[100dvh] flex items-center justify-center pt-24 pb-32 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/gym-hero.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero-portada.png')" }}
       />
-      <div className="absolute inset-0 bg-background/90" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      <div className="absolute inset-0 bg-background/80 md:bg-background/76" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/55 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/35 via-transparent to-background/35" />
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
 
