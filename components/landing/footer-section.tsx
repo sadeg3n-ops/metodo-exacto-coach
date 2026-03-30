@@ -41,11 +41,11 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
         </div>
       </section>
 
-      <div className="border-t border-border py-12">
+      <div className="border-t border-border/70 py-10 md:py-12 bg-background/30 md:bg-transparent backdrop-blur-[2px] md:backdrop-blur-none">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div>
-              <a href="#" className="flex items-center gap-2 mb-4">
+          <div className="grid md:grid-cols-3 gap-8 items-start text-center md:text-left justify-items-center md:justify-items-stretch">
+            <div className="max-w-xs md:max-w-none">
+              <a href="#" className="flex items-center justify-center md:justify-start gap-2 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Dumbbell className="w-5 h-5 text-primary" />
                 </div>
@@ -53,19 +53,19 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
                   Método <span className="text-primary">Exacto</span>
                 </span>
               </a>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground/80 text-sm max-w-xs mx-auto md:mx-0">
                 Entrenamiento y nutrición con criterio, seguimiento y ajustes reales.
               </p>
             </div>
 
-            <div>
+            <div className="max-w-xs md:max-w-none">
               <h4 className="font-semibold text-foreground mb-4">Navegación</h4>
-              <nav className="flex flex-col gap-2">
+              <nav className="flex flex-col gap-2 items-center md:items-start">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    className="text-muted-foreground/80 hover:text-foreground transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -73,10 +73,10 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
               </nav>
             </div>
 
-            <div>
+            <div className="max-w-xs md:max-w-none">
               <h4 className="font-semibold text-foreground mb-4">Contacto</h4>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-muted-foreground text-sm">
+              <div className="space-y-3 flex flex-col items-center md:items-start">
+                <div className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground/80 text-sm">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span>Online | España</span>
                 </div>
@@ -84,7 +84,7 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
                   href="https://wa.me/34600000000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground text-sm hover:text-foreground transition-colors group"
+                  className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground/80 text-sm hover:text-foreground transition-colors group"
                 >
                   <Phone className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
                   <span>WhatsApp · +34 600 000 000</span>
@@ -93,8 +93,8 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground">
+          <div className="mt-10 pt-8 border-t border-border/60 text-center">
+            <p className="text-sm text-muted-foreground/75">
               © {new Date().getFullYear()} Método Exacto. Todos los derechos reservados.
             </p>
           </div>
