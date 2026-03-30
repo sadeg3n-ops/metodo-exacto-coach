@@ -12,12 +12,12 @@ interface PricingSectionProps {
 }
 
 const features = [
-  "Plan ajustado a tu progreso",
-  "Revisión técnica en vídeo",
-  "Check-in semanal",
-  "Nutrición flexible",
-  "App con métricas y cargas",
-  "Soporte en 24 h laborables"
+  "Plan de entrenamiento ajustado según tu progreso",
+  "Revisión técnica en vídeo para evitar molestias y mejorar resultados",
+  "Check-in semanal para hacer cambios cuando toca (no al final)",
+  "Nutrición flexible adaptada a tu contexto",
+  "App con seguimiento de cargas y métricas",
+  "Soporte en menos de 24 h laborables"
 ]
 
 export function PricingSection({ onCtaClick }: PricingSectionProps) {
@@ -34,12 +34,12 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Así es el plan de 12 semanas
+              Así funciona el plan de 12 semanas
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-lg text-muted-foreground">
-              Si en la valoración vemos encaje, este es el modelo de trabajo.
+              Si en la valoración vemos que encaja contigo, este es el modelo de trabajo:
             </p>
           </Reveal>
         </div>
@@ -63,6 +63,9 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
               </CardHeader>
 
               <CardContent className="pb-10 flex flex-col items-center">
+                <p className="w-full max-w-sm text-left text-sm font-semibold text-foreground mb-5">
+                  Incluye:
+                </p>
                 <ul className="space-y-4 mb-8 w-full max-w-sm">
                   {features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
