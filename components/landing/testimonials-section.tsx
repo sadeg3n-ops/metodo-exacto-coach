@@ -10,7 +10,7 @@ const testimonials = [
     name: "Elena R.",
     age: "34 años",
     avatar: "/images/avatar-1.jpg",
-    quote: "Dejé de improvisar. Bajé 8 kg y, por primera vez, comí con estructura sin vivir a dieta.",
+    quote: "Llevaba años estancado sin bajar grasa. Cuando empecé a seguir una estructura clara, perdí 8 kg y dejé de sentir que vivía a dieta.",
     result: "-8 kg",
     beforeImage: "/images/before-1.jpg",
     afterImage: "/images/after-1.jpg",
@@ -20,7 +20,7 @@ const testimonials = [
     name: "David G.",
     age: "41 años",
     avatar: "/images/avatar-2.jpg",
-    quote: "La revisión técnica fue la diferencia. Dejé de molestarme y empecé a progresar de verdad.",
+    quote: "Llevaba tiempo entrenando con molestias y sin notar avances. Al corregir la técnica, dejé de tener dolor y por fin empecé a ganar músculo.",
     result: "+4 kg músculo",
     beforeImage: "/images/before-2.jpg",
     afterImage: "/images/after-2.jpg",
@@ -35,18 +35,13 @@ export function TestimonialsSection() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Reveal>
             <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-              Casos reales
+              RESULTADOS EVIDENTES
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Resultados que se entienden
+              Personas normales. Cambios medibles
             </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="text-lg text-muted-foreground">
-              Personas normales. Cambios medibles.
-            </p>
           </Reveal>
         </div>
 
