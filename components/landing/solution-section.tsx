@@ -1,28 +1,30 @@
 "use client"
 
-import { Lock, Target, Apple } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/ui/reveal"
 import { Tilt } from "@/components/ui/tilt"
 
 const features = [
   {
-    icon: Lock,
     title: "Entrenamiento con criterio",
     subtitle: "El estímulo exacto",
-    description: "Rutina diseñada y adaptada a tu nivel, tu material, tu experiencia y el tiempo del que dispones."
+    description: "Rutina diseñada y adaptada a tu nivel, tu material, tu experiencia y el tiempo del que dispones.",
+    image: "/images/process/entrenamiento-con-criterio.png",
+    imagePosition: "center center",
   },
   {
-    icon: Target,
     title: "Nutrición sostenible",
     subtitle: "Comer bien, sin aislarte",
-    description: "Objetivos claros, pautas flexibles y margen para comer fuera sin cortar el progreso."
+    description: "Objetivos claros, pautas flexibles y margen para comer fuera sin cortar el progreso.",
+    image: "/images/process/nutricion-sostenible.png",
+    imagePosition: "center center",
   },
   {
-    icon: Apple,
     title: "Seguimiento constante",
     subtitle: "Ajustes con datos",
-    description: "Revisamos tu técnica y sensaciones para corregirlas en el momento correcto y evitar lesiones."
+    description: "Revisamos tu técnica y sensaciones para corregirlas en el momento correcto y evitar lesiones.",
+    image: "/images/process/seguimiento-constante.png",
+    imagePosition: "center center",
   }
 ]
 
@@ -54,25 +56,34 @@ export function SolutionSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto auto-rows-fr">
           {features.map((feature, index) => (
             <Reveal
-              key={index}
+              key={feature.title}
               delay={0.3 + index * 0.15}
               className={index === 0 ? "lg:col-span-2 lg:row-span-2" : ""}
             >
               <Tilt className="h-full">
-                <Card className="h-full bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 group">
-                  <CardContent className={`p-6 md:p-8 flex flex-col items-center text-center justify-center h-full ${index === 0 ? "md:p-12" : ""}`}>
-                    <div className={`w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors ${index === 0 ? "w-20 h-20 mb-8" : ""}`}>
-                      <feature.icon className={`text-primary ${index === 0 ? "w-10 h-10" : "w-7 h-7"}`} />
+                <Card className="group relative h-full overflow-hidden border-border/70 bg-card/30 hover:border-primary/60 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+                  <div
+                    className="absolute inset-0 scale-100 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    style={{
+                      backgroundImage: `url('${feature.image}')`,
+                      backgroundPosition: feature.imagePosition,
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/45 transition-colors duration-500 group-hover:bg-black/80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/20 transition-all duration-500 group-hover:from-black/95 group-hover:via-black/80 group-hover:to-black/55" />
+
+                  <CardContent className={`relative z-10 flex h-full flex-col justify-end p-6 md:p-8 text-left ${index === 0 ? "md:p-12" : ""}`}>
+                    <div className="max-w-xl">
+                      <h3 className={`font-semibold text-white mb-2 ${index === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+                        {feature.title}
+                      </h3>
+                      <p className={`text-primary font-semibold tracking-wide ${index === 0 ? "text-lg md:text-xl" : "text-base"}`}>
+                        {feature.subtitle}
+                      </p>
+                      <p className={`mt-4 text-sm md:text-base leading-relaxed text-slate-300 transition-all duration-500 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 ${index === 0 ? "max-w-lg" : "max-w-sm"}`}>
+                        {feature.description}
+                      </p>
                     </div>
-                    <h3 className={`font-semibold text-foreground mb-1 ${index === 0 ? "text-3xl" : "text-xl"}`}>
-                      {feature.title}
-                    </h3>
-                    <p className={`text-primary font-medium mb-3 ${index === 0 ? "text-lg" : "text-sm"}`}>
-                      {feature.subtitle}
-                    </p>
-                    <p className={`text-muted-foreground leading-relaxed ${index === 0 ? "max-w-md mx-auto" : ""}`}>
-                      {feature.description}
-                    </p>
                   </CardContent>
                 </Card>
               </Tilt>

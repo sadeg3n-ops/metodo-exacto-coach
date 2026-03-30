@@ -7,16 +7,6 @@ import { BeforeAfterSlider } from "@/components/ui/before-after-slider"
 
 const testimonials = [
   {
-    name: "Elena R.",
-    age: "34 años",
-    avatar: "/images/avatar-1.jpg",
-    quote: "Llevaba años estancado sin bajar grasa. Cuando empecé a seguir una estructura clara, perdí 8 kg y dejé de sentir que vivía a dieta.",
-    result: "-8 kg",
-    beforeImage: "/images/before-1.jpg",
-    afterImage: "/images/after-1.jpg",
-    problem: "Venía de años sin bajar grasa."
-  },
-  {
     name: "David G.",
     age: "41 años",
     avatar: "/images/avatar-2.jpg",
@@ -45,9 +35,9 @@ export function TestimonialsSection() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Reveal key={index} delay={0.3 + index * 0.15}>
+            <Reveal key={testimonial.name} delay={0.3 + index * 0.15}>
               <Card className="bg-card border-border hover:border-primary/30 transition-all duration-300 h-full flex flex-col">
                 <CardContent className="p-6 md:p-8 flex-1 flex flex-col">
                   <div className="mb-6 -mx-2 md:-mx-4">
