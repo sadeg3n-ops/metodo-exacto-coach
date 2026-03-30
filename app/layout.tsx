@@ -12,9 +12,21 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://metodo-exacto-coach.vercel.app"),
   title: "Método Exacto | Asesoría Online Premium",
   description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
   keywords: "asesoría online, entrenador personal online, entrenamiento online, nutrición flexible, recomposición corporal",
+  openGraph: {
+    title: "Método Exacto | Asesoría Online Premium",
+    description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
+    siteName: "Método Exacto",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Método Exacto | Asesoría Online Premium",
+    description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
+  },
   icons: {
     icon: "/icon.svg",
     apple: "/apple-icon.png",
