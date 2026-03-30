@@ -17,9 +17,9 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero-portada.png')" }}
       />
-      <div className="absolute inset-0 bg-background/80 md:bg-background/76" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/55 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/35 via-transparent to-background/35" />
+      <div className="absolute inset-0 bg-background/58 md:bg-background/48" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/52 via-background/28 to-background/82" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/22 via-transparent to-background/22" />
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
 
@@ -44,7 +44,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
           </Reveal>
 
           <Reveal delay={0.2} duration={0.8}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance text-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance text-foreground drop-shadow-[0_6px_24px_rgba(0,0,0,0.75)]">
               Asesoría online para progresar con{" "}
               <span className="animate-text-gradient bg-gradient-to-r from-primary via-orange-400 to-primary">
                 criterio
@@ -54,7 +54,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
           </Reveal>
 
           <Reveal delay={0.3} duration={0.8}>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-pretty">
+            <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 text-pretty drop-shadow-[0_4px_18px_rgba(0,0,0,0.65)]">
               Reserva una valoración y te diré qué te está frenando, qué tendría sentido hacer en tu caso y si de verdad encajamos para trabajar juntos.
             </p>
           </Reveal>
@@ -72,7 +72,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                 </Button>
               </MagneticButton>
 
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-foreground/70 drop-shadow-[0_4px_18px_rgba(0,0,0,0.55)]">
                 Online. Gratis. Si no encaja, te lo digo.
               </p>
             </div>
