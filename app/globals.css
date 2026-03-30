@@ -74,6 +74,51 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes whatsapp-nudge {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  6% {
+    transform: translate3d(-1px, 0, 0) rotate(-1.4deg) scale(1.01);
+  }
+  12% {
+    transform: translate3d(2px, 0, 0) rotate(1.6deg) scale(1.02);
+  }
+  18% {
+    transform: translate3d(-2px, 0, 0) rotate(-1.2deg) scale(1.01);
+  }
+  24% {
+    transform: translate3d(1px, 0, 0) rotate(0.8deg) scale(1.015);
+  }
+  30% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes bridge-flow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: translateY(0) scaleY(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(8px) scaleY(1.06);
+  }
+}
+
+@keyframes bridge-pulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(234, 109, 31, 0.25);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 0 0 14px rgba(234, 109, 31, 0);
+  }
+}
+
 .animate-text-gradient {
   background-size: 200% auto;
   animation: text-gradient 8s linear infinite;
@@ -81,6 +126,22 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.animate-whatsapp-nudge {
+  animation: whatsapp-nudge 2.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.animate-bridge-flow {
+  animation: bridge-flow 2.6s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-bridge-pulse {
+  animation: bridge-pulse 2.2s ease-in-out infinite;
+  will-change: transform, opacity, box-shadow;
 }
 
 @theme inline {

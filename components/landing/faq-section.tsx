@@ -93,7 +93,7 @@ export function FaqSection() {
               href="https://wa.me/34600000000?text=Hola,%20tengo%20algunas%20dudas%20sobre%20el%20entrenamiento%20personal."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20 group text-sm"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20 group text-sm animate-whatsapp-nudge"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -113,19 +113,26 @@ export function FaqSection() {
           </Reveal>
         </div>
 
-        <div className="mt-16 text-muted-foreground/40 animate-bounce">
-          <svg
-            viewBox="0 0 24 24"
-            width="32"
-            height="32"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 5v14M19 12l-7 7-7-7" />
-          </svg>
+        <div className="mt-14 mb-2 flex flex-col items-center">
+          <div className="relative flex flex-col items-center">
+            <div className="h-16 w-px bg-gradient-to-b from-primary/20 via-primary/80 to-transparent animate-bridge-flow" />
+            <div className="absolute top-5 h-3 w-3 rounded-full bg-primary animate-bridge-pulse" />
+            <div className="mt-3 flex items-center justify-center text-primary/80">
+              <svg
+                viewBox="0 0 24 24"
+                width="30"
+                height="30"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="drop-shadow-[0_0_18px_rgba(234,109,31,0.35)]"
+              >
+                <path d="M12 4v14M18 12l-6 6-6-6" />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>
