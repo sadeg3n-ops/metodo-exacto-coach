@@ -35,7 +35,7 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
-              30 min. Online. Gratis. Si no encaja, te lo digo.
+              15 min. Online. Gratis. Si no encaja, te lo digo.
             </p>
           </div>
         </div>

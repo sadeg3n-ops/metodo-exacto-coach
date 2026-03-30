@@ -125,7 +125,7 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
               </form>
 
               <p className="text-xs text-muted-foreground text-center mt-4">
-                30 min. Online. Gratis. Respuesta en menos de 24 h por WhatsApp o email.
+                15 min. Online. Gratis. Respuesta en menos de 24 h por WhatsApp o email.
               </p>
             </>
           ) : (
