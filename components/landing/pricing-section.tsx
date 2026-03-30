@@ -16,7 +16,6 @@ const features = [
   "Revisión técnica en vídeo para evitar molestias y mejorar resultados",
   "Check-in semanal para hacer cambios cuando toca (no al final)",
   "Nutrición flexible adaptada a tu contexto",
-  "App con seguimiento de cargas y métricas",
   "Soporte en menos de 24 h laborables"
 ]
 
@@ -57,7 +56,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
                   Plan 12 semanas
                 </h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-5xl md:text-6xl font-bold text-primary">249€</span>
+                  <span className="text-5xl md:text-6xl font-bold text-primary">149€</span>
                   <span className="text-muted-foreground text-lg">/ mes</span>
                 </div>
               </CardHeader>
@@ -89,7 +88,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
                 </MagneticButton>
 
                 <p className="text-center text-sm text-muted-foreground mt-4">
-                  249€/mes. Primero valoramos tu caso.
+                  149€/mes. Primero valoramos tu caso.
                 </p>
               </CardContent>
             </Card>
