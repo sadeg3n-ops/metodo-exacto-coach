@@ -38,24 +38,23 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 mx-auto">
               <Clock className="w-4 h-4 text-primary" />
               <span className="text-sm text-primary font-medium">
-                Valoración inicial · 15 min
+                Valoración inicial · 15 min · Gratis
               </span>
             </div>
           </Reveal>
 
           <Reveal delay={0.2} duration={0.8}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance text-foreground drop-shadow-[0_6px_24px_rgba(0,0,0,0.75)]">
-              La Asesoría Online que te brinda{" "}
+              La asesoría online para personas que entrenan{" "}
               <span className="animate-text-gradient bg-gradient-to-r from-primary via-orange-400 to-primary">
-                progresos constantes
+                pero no ven cambios
               </span>
-              .
             </h1>
           </Reveal>
 
           <Reveal delay={0.3} duration={0.8}>
             <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 text-pretty drop-shadow-[0_4px_18px_rgba(0,0,0,0.65)]">
-              Reserva una valoración y te diré qué te está frenando, qué tendría sentido hacer en tu caso y si de verdad encajamos para trabajar juntos.
+              Detectamos qué está frenando tu progreso y si tiene sentido trabajar juntos.
             </p>
           </Reveal>
 
