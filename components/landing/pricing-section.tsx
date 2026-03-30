@@ -22,7 +22,7 @@ const features = [
 
 export function PricingSection({ onCtaClick }: PricingSectionProps) {
   return (
-    <section id="precio" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="precio" className="pt-14 pb-20 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">

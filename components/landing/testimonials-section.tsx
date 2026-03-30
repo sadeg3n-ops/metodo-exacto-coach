@@ -1,6 +1,6 @@
 "use client"
 
-import { Star, Quote } from "lucide-react"
+import { Star, Quote, ChevronDown } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/ui/reveal"
 import { BeforeAfterSlider } from "@/components/ui/before-after-slider"
@@ -20,7 +20,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-20 md:py-28 bg-secondary/30">
+    <section className="pt-14 pb-12 md:py-28 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Reveal>
@@ -81,6 +81,13 @@ export function TestimonialsSection() {
               </Card>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-8 flex justify-center md:hidden">
+          <div className="flex flex-col items-center text-primary/80">
+            <div className="h-8 w-px bg-primary/35" />
+            <ChevronDown className="h-5 w-5 animate-bounce" />
+          </div>
         </div>
       </div>
     </section>

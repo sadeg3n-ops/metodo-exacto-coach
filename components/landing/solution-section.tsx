@@ -1,5 +1,6 @@
 "use client"
 
+import { ChevronDown } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/ui/reveal"
 import { Tilt } from "@/components/ui/tilt"
@@ -30,7 +31,7 @@ const features = [
 
 export function SolutionSection() {
   return (
-    <section id="resultados" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="resultados" className="pt-16 pb-12 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
@@ -53,7 +54,7 @@ export function SolutionSection() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto auto-rows-fr">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 max-w-5xl mx-auto md:auto-rows-fr">
           {features.map((feature, index) => (
             <Reveal
               key={feature.title}
@@ -89,6 +90,13 @@ export function SolutionSection() {
               </Tilt>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-8 flex justify-center md:hidden">
+          <div className="flex flex-col items-center text-primary/80">
+            <div className="h-8 w-px bg-primary/35" />
+            <ChevronDown className="h-5 w-5 animate-bounce" />
+          </div>
         </div>
       </div>
     </section>
