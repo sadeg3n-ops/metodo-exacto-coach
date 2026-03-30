@@ -1,28 +1,28 @@
-import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import { LiveToasts } from '@/components/ui/live-toasts'
-import { CustomCursor } from '@/components/ui/custom-cursor'
-import './globals.css'
+import type { Metadata, Viewport } from "next"
+import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { LiveToasts } from "@/components/ui/live-toasts"
+import { CustomCursor } from "@/components/ui/custom-cursor"
+import "./globals.css"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter"
-});
+})
 
 export const metadata: Metadata = {
-  title: 'Método Exacto | Asesoría Online Premium de Entrenamiento y Nutrición',
-  description: 'Consigue el físico y el rendimiento que buscas con una estrategia exacta para ti. Entrenamiento y nutrición individualizados con seguimiento semanal y revisión técnica.',
-  keywords: 'asesoría online entrenador personal, entrenamiento online, nutrición flexible, recomposición corporal, coaching fitness',
+  title: "Método Exacto | Asesoría Online Premium",
+  description: "Reserva una valoración inicial y descubre qué necesitas para progresar con entrenamiento y nutrición adaptados a tu caso.",
+  keywords: "asesoría online, entrenador personal online, entrenamiento online, nutrición flexible, recomposición corporal",
   icons: {
-    icon: '/icon.svg',
-    apple: '/apple-icon.png',
+    icon: "/icon.svg",
+    apple: "/apple-icon.png",
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0f172a',
-  width: 'device-width',
+  themeColor: "#0f172a",
+  width: "device-width",
   initialScale: 1,
 }
 
@@ -35,7 +35,6 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <CustomCursor />
-        {/* Film Grain Texture Overlay */}
         <div className="pointer-events-none fixed inset-0 z-[100] h-full w-full opacity-[0.03] mix-blend-overlay">
           <svg width="100%" height="100%">
             <filter id="noise">
@@ -44,8 +43,7 @@ export default function RootLayout({
             <rect width="100%" height="100%" filter="url(#noise)" />
           </svg>
         </div>
-        
-        
+
         {children}
         <LiveToasts />
         <Analytics />

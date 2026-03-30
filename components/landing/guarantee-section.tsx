@@ -10,13 +10,13 @@ export function GuaranteeSection() {
           <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
             <Shield className="w-10 h-10 text-primary" />
           </div>
-          
+
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Garantía de Resultados de 30 Días
+            Garantía 30 días
           </h2>
-          
+
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Si cumples con el 100% de la planificación durante los primeros 30 días y no observas mejoras medibles, te devolvemos tu dinero. Sin letra pequeña.
+            Si cumples el plan y no hay mejora medible, te devolvemos el dinero.
           </p>
         </div>
       </div>

@@ -5,28 +5,24 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Bell } from "lucide-react"
 
 const TOASTS = [
-  { name: "Elena", action: "acaba de agendar su valoración gratuita", time: "hace 2 min" },
-  { name: "David", action: "ha recibido su revisión técnica semanal", time: "hace 18 min" },
-  { name: "María", action: "empezó su plan de 12 semanas", time: "hace 1 hora" },
-  { name: "Javier", action: "ha completado su check-in semanal", time: "hace 7 min" }
+  { name: "Elena", action: "acaba de reservar su valoración", time: "hace 2 min" },
+  { name: "David", action: "completó su check-in semanal", time: "hace 18 min" },
+  { name: "María", action: "recibió su ajuste de nutrición", time: "hace 1 hora" },
+  { name: "Javier", action: "empezó su semana 1", time: "hace 7 min" }
 ]
 
 export function LiveToasts() {
   const [currentToast, setCurrentToast] = useState<typeof TOASTS[0] | null>(null)
 
   useEffect(() => {
-    // Show first toast after 15s
     const firstTimer = setTimeout(() => {
       setCurrentToast(TOASTS[0])
-      
       setTimeout(() => setCurrentToast(null), 5000)
     }, 15000)
 
-    // Then show random toasts every 15-30s
     const interval = setInterval(() => {
       const randomToast = TOASTS[Math.floor(Math.random() * TOASTS.length)]
       setCurrentToast(randomToast)
-      
       setTimeout(() => setCurrentToast(null), 5000)
     }, 25000)
 

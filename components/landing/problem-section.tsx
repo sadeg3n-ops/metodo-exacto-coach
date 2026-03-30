@@ -7,18 +7,18 @@ import { Reveal } from "@/components/ui/reveal"
 const problems = [
   {
     icon: TrendingDown,
-    title: "Estancamiento crónico",
-    description: "Entrenas sin una progresión clara. Haces rutinas genéricas que no están adaptadas a tu estructura ni a tu nivel, invirtiendo horas sin ver cambios reales en tu cuerpo."
+    title: "Rutina sin progresión",
+    description: "Entrenas, pero no sabes qué tocar para seguir mejorando."
   },
   {
     icon: Users,
-    title: "Dietas restrictivas e insostenibles",
-    description: "Has probado menús cerrados que te prohíben comer lo que te gusta. Aguantas unas semanas a base de fuerza de voluntad, pero acabas abandonando por ansiedad y falta de energía."
+    title: "Dietas difíciles de seguir",
+    description: "Si no te gusta lo que comes, acabarás abandonando."
   },
   {
     icon: AlertCircle,
-    title: "Entrenar a ciegas y sin seguimiento",
-    description: "Nadie te corrige la técnica. Nadie adapta tu plan cuando te estancas o cuando tienes una semana complicada. Estás solo en el proceso, adivinando cuál es el siguiente paso."
+    title: "Cero personalización",
+    description: "Sin seguimiento ni ajustes, dejarás de mejorar rápido."
   }
 ]
 
@@ -29,12 +29,12 @@ export function ProblemSection() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Reveal>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 text-balance">
-              ¿Llevas meses entrenando sin que el espejo refleje tu esfuerzo?
+              Si entrenas y comes sin seguir un plan, te estancas.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg text-slate-600">
-              La mayoría de las personas se estancan no por falta de disciplina, sino por falta de dirección. Hacer cosas al azar genera resultados al azar.
+              El problema rara vez es la actitud. Suele ser el sistema.
             </p>
           </Reveal>
         </div>
@@ -42,9 +42,7 @@ export function ProblemSection() {
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {problems.map((problem, index) => (
             <Reveal key={index} delay={index * 0.15}>
-              <Card 
-                className="bg-slate-50 border-slate-200 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg group h-full"
-              >
+              <Card className="bg-slate-50 border-slate-200 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg group h-full">
                 <CardContent className="p-6 md:p-8 flex flex-col items-center text-center">
                   <div className="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6 group-hover:bg-orange-500/20 transition-colors">
                     <problem.icon className="w-7 h-7 text-orange-500" />

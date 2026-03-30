@@ -10,24 +10,28 @@ import { Reveal } from "@/components/ui/reveal"
 
 const faqs = [
   {
-    question: "¿Sirve si soy principiante?",
-    answer: "Sí. De hecho, empezar con supervisión profesional te ahorra meses de ensayo y error, evitando que adquieras malos hábitos técnicos o te lesiones. La curva de aprendizaje se adapta a tu nivel actual."
+    question: "¿Y si tengo poco tiempo?",
+    answer: "Trabajamos con tu semana real. Con 3 sesiones bien planteadas ya se puede progresar."
   },
   {
-    question: "¿Y si tengo poco tiempo para entrenar?",
-    answer: "El plan se ajusta a tu disponibilidad. Si solo tienes 3 días a la semana durante 45 minutos, estructuraremos la rutina para priorizar los ejercicios que generen el mayor retorno de inversión en ese tiempo."
+    question: "¿Sirve si empiezo desde cero?",
+    answer: "Sí. Empezar con supervisión suele ahorrar más tiempo que ir a base de prueba y error."
   },
   {
-    question: "¿Necesito estar apuntado a un gimnasio?",
-    answer: "No es imprescindible. Si prefieres entrenar en casa, diseñaremos la programación basándonos en el equipamiento que tengas disponible, aunque siempre recomendaremos material mínimo para poder progresar."
+    question: "¿Y si ya lo he intentado antes?",
+    answer: "Suele fallar el sistema, no las ganas. Aquí revisamos y ajustamos antes de repetir el mismo error."
   },
   {
-    question: "¿Me vais a dar una dieta estricta?",
-    answer: "No trabajamos con dietas cerradas de lunes a domingo. Te daremos tus requerimientos nutricionales, ejemplos de comidas, lista de la compra y opciones de intercambio. El objetivo es que aprendas a gestionar tu alimentación a largo plazo."
+    question: "¿Necesito gimnasio?",
+    answer: "No. Podemos trabajar en casa con el material que tengas, aunque te diré qué mínimo te conviene para progresar mejor."
   },
   {
-    question: "¿Cuándo empezaré a notar cambios?",
-    answer: "Los cambios en el rendimiento suelen aparecer en las primeras 2 o 3 semanas. Los cambios físicos a nivel visual comienzan a ser evidentes a partir de la semana 4 a 6, siempre que mantengas la adherencia al plan."
+    question: "¿Me vais a vender algo en la valoración?",
+    answer: "No. La valoración sirve para ver si hay encaje. Si no lo veo claro, te lo diré."
+  },
+  {
+    question: "¿Cuándo se suelen notar cambios?",
+    answer: "Normalmente primero mejora el rendimiento y la sensación de control. Los cambios físicos suelen verse entre la semana 4 y la 6."
   }
 ]
 
@@ -38,12 +42,12 @@ export function FaqSection() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Reveal>
             <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-              Preguntas Frecuentes
+              FAQ
             </span>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Resolvemos las dudas que frenan tu progreso
+              Dudas antes de reservar
             </h2>
           </Reveal>
         </div>
@@ -51,8 +55,8 @@ export function FaqSection() {
         <div className="max-w-2xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <Reveal key={index} delay={0.2 + (index * 0.1)}>
-                <AccordionItem 
+              <Reveal key={index} delay={0.2 + index * 0.1}>
+                <AccordionItem
                   value={`item-${index}`}
                   className="bg-card border border-border rounded-xl px-6 overflow-hidden"
                 >
@@ -66,6 +70,62 @@ export function FaqSection() {
               </Reveal>
             ))}
           </Accordion>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 mt-20 flex flex-col items-center">
+        <div className="max-w-xl w-full text-center bg-card border border-border rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-xl">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#25D366]/10 to-transparent pointer-events-none" />
+
+          <Reveal>
+            <h3 className="text-xl font-bold text-foreground mb-2">
+              ¿Tienes más dudas?
+            </h3>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p className="text-muted-foreground mb-6 text-sm">
+              Escríbenos y te responderemos lo antes posible para ayudarte a dar el primer paso.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <a
+              href="https://wa.me/34600000000?text=Hola,%20tengo%20algunas%20dudas%20sobre%20el%20entrenamiento%20personal."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20 group text-sm"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5 group-hover:-rotate-12 transition-transform"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+          </Reveal>
+        </div>
+
+        <div className="mt-16 text-muted-foreground/40 animate-bounce">
+          <svg
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
         </div>
       </div>
     </section>

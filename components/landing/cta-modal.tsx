@@ -23,7 +23,6 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Frontend-only: just show success state
     setSubmitted(true)
   }
 
@@ -36,21 +35,18 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
   if (!isOpen) return null
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
         onClick={handleClose}
       />
-      
-      {/* Modal */}
+
       <div className="relative w-full max-w-md bg-card border border-border rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-200">
-        {/* Close button */}
         <button
           onClick={handleClose}
           className="absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -63,15 +59,15 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
           {!submitted ? (
             <>
               <h2 id="modal-title" className="text-2xl font-bold text-foreground mb-2">
-                Agenda tu valoración gratuita
+                Reserva tu valoración inicial
               </h2>
               <p className="text-muted-foreground mb-6">
-                Cuéntanos tu punto de partida y te contactaremos en menos de 24 horas con los siguientes pasos.
+                Es una llamada breve para ver tu caso, detectar el bloqueo y decirte si puedo ayudarte.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="nombre">Nombre completo</Label>
+                  <Label htmlFor="nombre">Nombre</Label>
                   <Input
                     id="nombre"
                     type="text"
@@ -110,26 +106,26 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="objetivo">¿Qué quieres conseguir en las próximas 12 semanas?</Label>
+                  <Label htmlFor="objetivo">Objetivo</Label>
                   <Textarea
                     id="objetivo"
-                    placeholder="Perder grasa, ganar músculo, mejorar rendimiento, dejar de estancarme..."
+                    placeholder="Qué buscas, qué te está costando y cuánto tiempo tienes"
                     value={formData.objetivo}
                     onChange={(e) => setFormData({ ...formData, objetivo: e.target.value })}
                     className="bg-secondary border-border min-h-[100px]"
                   />
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6"
                 >
-                  Quiero mi valoración
+                  Solicitar valoración
                 </Button>
               </form>
 
               <p className="text-xs text-muted-foreground text-center mt-4">
-                Es una llamada de 15 min. Gratis y sin compromiso.
+                20 min. Online. Gratis. Respuesta en menos de 24 h por WhatsApp o email.
               </p>
             </>
           ) : (
@@ -138,12 +134,12 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
                 <CheckCircle2 className="w-8 h-8 text-primary" />
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-2">
-                ¡Solicitud enviada!
+                Solicitud enviada
               </h2>
               <p className="text-muted-foreground mb-6">
-                Te contactaremos en menos de 24 horas para confirmar tu valoración gratuita.
+                Te responderé en menos de 24 h por WhatsApp o email para proponerte horario.
               </p>
-              <Button 
+              <Button
                 onClick={handleClose}
                 variant="outline"
                 className="border-border"

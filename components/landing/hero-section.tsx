@@ -13,78 +13,70 @@ interface HeroSectionProps {
 export function HeroSection({ onCtaClick }: HeroSectionProps) {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center pt-24 pb-32 overflow-hidden">
-      {/* Background image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/gym-hero.jpg')" }}
       />
-      {/* Dark overlay for contrast */}
       <div className="absolute inset-0 bg-background/90" />
-      {/* Background gradient effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      
-      {/* Grid pattern overlay */}
-      <div 
+      <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+
+      <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px),
                            linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundSize: "60px 60px"
         }}
       />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
           <Reveal delay={0.1}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 mx-auto">
               <Clock className="w-4 h-4 text-primary" />
               <span className="text-sm text-primary font-medium">
-                Solo 10 plazas nuevas al mes
+                Valoración inicial · 20 min
               </span>
             </div>
           </Reveal>
 
-          {/* Main Headline */}
           <Reveal delay={0.2} duration={0.8}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-balance text-foreground">
-              Consigue el físico y el rendimiento que buscas con una{" "}
+              Asesoría online para progresar con{" "}
               <span className="animate-text-gradient bg-gradient-to-r from-primary via-orange-400 to-primary">
-                estrategia exacta para ti
+                criterio
               </span>
-              . Cero estancamiento. Cero dietas de cajón.
+              .
             </h1>
           </Reveal>
 
-          {/* Subtitle */}
           <Reveal delay={0.3} duration={0.8}>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-pretty">
-              Asesoría online premium. Entrenamiento y nutrición individualizados con revisión técnica y seguimiento semanal para asegurar tu progreso.
+              Reserva una valoración y te diré qué te está frenando, qué tendría sentido hacer en tu caso y si de verdad encajamos para trabajar juntos.
             </p>
           </Reveal>
 
-          {/* CTA Button */}
           <Reveal delay={0.4} duration={0.8}>
             <div className="flex flex-col items-center gap-4">
               <MagneticButton>
-                <Button 
+                <Button
                   onClick={onCtaClick}
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-7 rounded-xl group transition-all hover:scale-105"
                 >
-                  Agendar mi valoración gratuita
+                  Reservar valoración
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </MagneticButton>
-               
+
               <p className="text-sm text-muted-foreground">
-                Limitamos el acceso para garantizar un seguimiento riguroso y una atención 100% personalizada a cada cliente.
+                Online. Gratis. Si no encaja, te lo digo.
               </p>
             </div>
           </Reveal>
-          {/* Stats */}
+
           <Reveal delay={0.5} duration={0.8}>
             <div className="grid grid-cols-3 gap-4 md:gap-8 mt-16 pt-16 pb-12 border-t border-border/50">
               <div className="text-center">
@@ -97,20 +89,19 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                 <p className="text-3xl md:text-5xl font-bold text-primary mb-2">
                   <Counter value={12} delay={0.3} />
                 </p>
-                <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">Semanas de enfoque</p>
+                <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">Semanas</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl md:text-5xl font-bold text-primary mb-2">
                   <Counter value={98} suffix="%" delay={0.5} />
                 </p>
-                <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">Éxito comprobado</p>
+                <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">Adherencia</p>
               </div>
             </div>
           </Reveal>
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <div className="w-1 h-2 bg-muted-foreground/50 rounded-full" />
