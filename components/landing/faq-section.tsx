@@ -88,7 +88,7 @@ export function FaqSection() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.2}>
+          <Reveal delay={0}>
             <a
               href="https://wa.me/34600000000?text=Hola,%20tengo%20algunas%20dudas%20sobre%20el%20entrenamiento%20personal."
               target="_blank"
