@@ -95,7 +95,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
                 <p className="text-3xl md:text-5xl font-bold text-primary mb-2">
                   <Counter value={98} suffix="%" delay={0.5} />
                 </p>
-                <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">Adherencia</p>
+                <p className="text-sm md:text-base text-muted-foreground font-medium uppercase tracking-wider">Éxito</p>
               </div>
             </div>
           </Reveal>
